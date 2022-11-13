@@ -1,6 +1,7 @@
 const seasons = ["winter", "spring", "summer", "fall"];
 const mediaTypes = ["tv", "ova", "movie", "special"];
 const dataTypes = ["user", "total"];
+const proxyUrl = "https://corsanywhere.herokuapp.com/";
 const maxYear = 2022;
 
 var nonSeasonal = [];
@@ -17,7 +18,7 @@ function getData() {
 	var userData = generateDataDict();
 	var promises = [];
 	for (var s = 0; s < includedStatuses.length; s++) {
-		const url = 'https://api.myanimelist.net/v2/users/' + username + '/animelist?status=' + includedStatuses[s] + '&fields=start_season,media_type&limit=1000&nsfw=true';
+		const url = proxyUrl + 'https://api.myanimelist.net/v2/users/' + username + '/animelist?status=' + includedStatuses[s] + '&fields=start_season,media_type&limit=1000&nsfw=true';
 		promises.push(
 			window.fetch(url, {
 				method: 'get',
