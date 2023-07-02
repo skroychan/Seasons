@@ -1,7 +1,7 @@
 const seasons = ["winter", "spring", "summer", "fall"];
 const mediaTypes = ["tv", "ova", "movie", "special"];
 const dataTypes = ["user", "total"];
-const proxyUrl = "https://corsanywhere.herokuapp.com/";
+const proxyUrl = "https://cors-anywhere-ply9.onrender.com/";
 const maxYear = 2022;
 
 var nonSeasonal = [];
